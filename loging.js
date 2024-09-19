@@ -27,7 +27,7 @@ addEventListener('click', function(event){
    console.log(phonNumber,pinNumber);
    if(phonNumber === '5' && pinNumber ==='1234'){
     console.log('cart pin and number ');
-    window.location.href= '/home.html';
+    window.location.href= './dom.html';
     //step -5 : allow user to us the website
 
 }
