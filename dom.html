@@ -3,54 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>payoo Home page</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <!-- font googl  link  -->
+
+
+
+    <!-- font Railway -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+
+     <!-- font inter -->
+
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        </style>
+      <!-- link TailwindCss cdn -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+
+      <script src="https://cdn.tailwindcss.com"></script>
+
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                
+                primary :'#1dd100',
+                secondary:'#030712',
+                couponOne:  '#ffbf0f',
+                couponTwo: '#f78c9c',
+                mobileMenu: '#f7f8f8',
+                body:'#033071299',
+                buttonColor:'rgba(29,209,0,0,15)',
+
+
+              },
+
+             fontFamily:{
+                Raleway:'Raleway',
+                Inter:'Inter',
+
+             }
+            },
+          },
+        }
+      </script>
 
 </head>
 <body>
-    <h1>welcome to home page </h1>
+    <!-- nav stat  -->
+
     <div class="navbar bg-base-100">
         <div class="flex-1">
-          <a class="btn btn-ghost text-xl">daisyUI</a>
+          <a class="btn btn-ghost text-xl">Raleway</a>
+          <div>
+            <button id="make-blue" class="btn btn-active btn-accent ">blue</button>
+            <button onclick="makeRed()" class="btn btn-active btn-accent ">red</button>
+           </div>
         </div>
-        <div class="flex-none">
-          <div class="dropdown dropdown-end">
-            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-              <div class="indicator">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-                <span class="badge badge-sm indicator-item">8</span>
-              </div>
-            </div>
-            <div
-              tabindex="0"
-              class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
-              <div class="card-body">
-                <span class="text-lg font-bold">8 Items</span>
-                <span class="text-info">Subtotal: $999</span>
-                <div class="card-actions">
-                  <button class="btn btn-primary btn-block">View cart</button>
-                </div>
-              </div>
-            </div>
+       
+        <div class="flex-none gap-2">
+          <div class="form-control">
+            <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
           </div>
           <div class="dropdown dropdown-end">
             <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
               <div class="w-10 rounded-full">
                 <img
                   alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  src="/banner.png" />
               </div>
             </div>
             <ul
@@ -68,66 +91,390 @@
           </div>
         </div>
       </div>
-      <!-- mero secon -->
-      <div
-      class="hero min-h-screen"
-      style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
-      <div class="hero-overlay bg-opacity-60"></div>
-      <div class="hero-content text-neutral-content text-center">
-        <div class="max-w-md">
-          <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-          <p class="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-            quasi. In deleniti eaque aut repudiandae et a id nisi.
-          </p>
-          <button class="btn btn-primary">Get Started</button>
+     <!-- nav end -->
+    <!-- banner stat  -->
+    <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img
+            src="/banner.png"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
         </div>
       </div>
-    </div>
-    <footer>
-        <footer class="footer bg-neutral text-neutral-content grid-rows-2 p-10">
-            <nav>
-              <h6 class="footer-title">Services</h6>
-              <a class="link link-hover">Branding</a>
-              <a class="link link-hover">Design</a>
-              <a class="link link-hover">Marketing</a>
-              <a class="link link-hover">Advertisement</a>
-            </nav>
-            <nav>
-              <h6 class="footer-title">Company</h6>
-              <a class="link link-hover">About us</a>
-              <a class="link link-hover">Contact</a>
-              <a class="link link-hover">Jobs</a>
-              <a class="link link-hover">Press kit</a>
-            </nav>
-            <nav>
-              <h6 class="footer-title">Legal</h6>
-              <a class="link link-hover">Terms of use</a>
-              <a class="link link-hover">Privacy policy</a>
-              <a class="link link-hover">Cookie policy</a>
-            </nav>
-            <nav>
-              <h6 class="footer-title">Social</h6>
-              <a class="link link-hover">Twitter</a>
-              <a class="link link-hover">Instagram</a>
-              <a class="link link-hover">Facebook</a>
-              <a class="link link-hover">Github</a>
-            </nav>
-            <nav>
-              <h6 class="footer-title">Explore</h6>
-              <a class="link link-hover">Features</a>
-              <a class="link link-hover">Enterprise</a>
-              <a class="link link-hover">Security</a>
-              <a class="link link-hover">Pricing</a>
-            </nav>
-            <nav>
-              <h6 class="footer-title">Apps</h6>
-              <a class="link link-hover">Mac</a>
-              <a class="link link-hover">Windows</a>
-              <a class="link link-hover">iPhone</a>
-              <a class="link link-hover">Android</a>
-            </nav>
-          </footer>
-    </footer>
+
+
+     <!--  banner end  -->
+       <!-- cart stat  -->
+        <!-- cart 1 --> 
+         
+        <section class= "flex gap-5 justify-center ">
+        <div class= "  w-48  bg-lime-200 ">
+       <div class=" flex  justify-center">
+        <figure>
+          <img
+            src="./images/people.png"
+            alt="car!" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">500k+</h2>
+          <p>rejisar us</p>
+        
+        </div>
+      </div>
+</div>
+<!-- cart 2 -->
+
+<div class= "  w-48  bg-lime-200 ">
+    <div class=" flex justify-center">
+     <figure>
+       <img
+         src="./images/ticket-cupon.png"
+         alt="car!" />
+     </figure>
+     <div class="card-body">
+       <h2 class="card-title">1.17 </h2>
+       <p>tikit </p>
+     
+     </div>
+   </div>
+</div>
+<!-- cart 3 -->
+<div class= "  w-48  bg-lime-200 ">
+    <div class=" flex justify-center">
+     <figure>
+       <img
+         src="./images/seat-gray.png"
+         alt="car!" />
+     </figure>
+     <div class="card-body">
+       <h2 class="card-title">80k+</h2>
+       <p>viws</p>
+     
+     </div>
+   </div>
+</div>
+</section>
+       <!-- cart end -->
+
+       <!--  -->
+
+        <!-- Hero part stat -->
+        <div class="flex  items-center justify-center  min-h-screen bg-gray-200 mt-16">
+            <div class="container  bg-white rounded-xl shadow-lg p-6 mt-4">
+              <!-- Title -->
+              <div
+                class="text-center text-2xl font-bold mb-6  text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+              >
+                💻   Tictek bu naw by  
+              </div>
+              <!-- Tabs for Assistant and History -->
+              <div class="flex justify-between mb-6">
+                <button
+                  id="assistant-tab"
+                  class="w-1/2 py-2 rounded-l-md focus:outline-none transition-colors duration-200 text-white font-semibold bg-gradient-to-r from-blue-500 to-purple-600"
+                >
+                  Assistant
+                </button>
+                <button
+                  id="history-tab"
+                  class="w-1/2 py-2 rounded-r-md focus:outline-none transition-colors duration-200 text-gray-600 font-semibold"
+                >
+                  History
+                </button>
+              </div>
+              <!-- Expense Form -->
+              <div id="expense-form" class="grid grid-cols-2 gap-4">
+                <!-- Income -->
+                <div class="relative col-span-2">
+                  <label class="block font-semibold mb-2 text-gray-700"
+                    >Income 💰</label
+                  >
+                  <input
+                    id="income"
+                    type="number"
+                    class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    placeholder="Enter income"
+                  />
+                  <p id="income-error" class="text-red-500 text-xs mt-1 ">hidden
+                    ⚠️ Invalid income!
+                  </p>
+                </div>
+                <!-- Software Subscriptions -->
+                <div class="relative">
+                  <label class="block font-semibold mb-2 text-gray-700 "
+                    >Software 💻</label
+                  >
+                  <input
+                    type="number"
+                    id="software"
+                    class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    placeholder="Software cost"
+                  />
+                  <p id="software-error" class="text-red-500 text-xs mt-1"> hidden
+                    ⚠️ Invalid amount!
+                  </p>
+                </div>
+                <!-- Courses/Books -->
+                <div class="relative">
+                  <label class="block font-semibold mb-2 text-gray-700"
+                    >Courses 📚</label
+                  >
+                  <input
+                    type="number"
+                    id="courses"
+                    class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    placeholder="Course cost"
+                  />
+                  <p id="courses-error" class="text-red-500 text-xs mt-1"> hidden
+                    ⚠️ Invalid amount!
+                  </p>
+                </div>
+                <!-- Internet -->
+                <div class="relative">
+                  <label class="block font-semibold mb-2 text-gray-700"
+                    >Internet 🌐</label
+                  >
+                  <input
+                    type="number"
+                    id="internet"
+                    class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    placeholder="Internet cost"
+                  />
+                  <p id="internet-error" class="text-red-500 text-xs mt-1"> hidden
+                    ⚠️ Invalid amount!
+                  </p>
+                </div>
+                <!-- Calculate Button -->
+                <button
+                  id="calculate"
+                  class="col-span-2 text-white px-4 py-2 rounded-md font-semibold text-sm transition-all duration-200 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 focus:ring-blue-500"
+                >
+                  Calculate
+                </button>
+                <!-- Savings -->
+                <div class="relative col-span-2">
+                  <label class="block font-semibold mb-2 text-gray-700"
+                    >Savings (%) 💸</label
+                  >
+                  <input
+                    type="number"
+                    id="savings"
+                    class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    placeholder="Savings %"
+                  />
+                  <p id="savings-error" class="text-red-500 hidden text-xs mt-1"> 
+                    ⚠️ Invalid percentage!
+                  </p>
+                </div>
+                <!-- Calculate Savings Button -->
+                <button
+                  id="calculate-savings"
+                  class="col-span-2 text-white px-4 py-2 rounded-md font-semibold text-sm transition-all duration-200 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 focus:ring-green-500"
+                >
+                  Calculate Savings
+                </button>
+              </div>
+              <!-- Results -->
+              <div
+                id="results"
+                class="mt-8 from-blue-50 to-purple-50 p-4 rounded-lg shadow-md hidden border-blue-200"
+              > 
+                <h3
+                  class="text-lg font-semibold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                >
+                  Results Summary
+                </h3>
+                <div class="grid grid-cols-2 gap-3">
+                  <div
+                    class="bg-white p-3 rounded-md shadow-sm border-l-2 border-blue-500"
+                  >
+                    <p class="text-xs text-gray-500">Total Expenses</p>
+                    <p class="text-sm font-bold text-gray-800">
+                      ৳<span id="total-expenses">00</span>
+                    </p>
+                  </div>
+                  <div
+                    class="bg-white p-3 rounded-md shadow-sm border-l-2 border-green-500"
+                  >
+                    <p class="text-xs text-gray-500">Balance</p>
+                    <p class="text-sm font-bold text-gray-800">
+                      ৳<span id="balance">00</span>
+                    </p>
+                  </div>
+                  <div
+                    class="bg-white p-3 rounded-md shadow-sm border-l-2 border-purple-500"
+                  >
+                    <p class="text-xs text-gray-500">Savings Amount</p>
+                    <p class="text-sm font-bold text-gray-800">
+                      ৳<span id="savings-amount">00</span>
+                    </p>
+                  </div>
+                  <div
+                    class="bg-white p-3 rounded-md shadow-sm border-l-2 border-yellow-500"
+                  >
+                    <p class="text-xs text-gray-500">Remaining Balance</p>
+                    <p class="text-sm font-bold text-gray-800">
+                      ৳<span id="remaining-balance">00</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Error Messages -->
+              <p id="logic-error" class="text-red-500 mt-4  text-center">hidden
+                ⚠️ Total expenses cannot exceed your income!
+              </p>
+              <!-- History Section -->
+              <div
+                id="history-section"
+                class="bg-gradient-to-br  from-blue-50 to-purple-50 p-4 rounded-lg shadow-md border border-blue-200"
+              >hidden
+                <h3
+                  class="text-lg font-semibold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                >
+                  🕒 Expense History
+                </h3>
+                <div id="history-list" class="grid grid-cols-2 gap-3"></div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Hero part end -->
+         <!--  -->
+    <section class="bg-white px-8 py-5 m-11/12 mx-auto rounded-2xl shadow-sm grid grid-cols-3 gap-5">
+<div class="bg-red-500 col-span-2">
+<div>
+  <h1>selet Your set</h1>
+  
+ 
+</div> 
+<div>
+    <p ><img src="data:image/png;base64,iVBO
+      Rw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4
+      ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADKklEQV
+      R4nN2ZS2gUQRCGv0SDRlT0ICpE4kEloGjWg6LiIQo
+      eTCLiAy96EDxJlFziScWQEE+Cm/hCk6zgxZMIgeCD
+      JKBEEV8XjSIBEYU1GvARRVTMSksNDMtub0/PzDqzP
+      xRMT89W1T9V1V3bA+ZoBIaAbyKDQAPBYTVwBhhx2
+      VDXXUAiKCMdQCaPtPvUPQNIAZMaG2quF6j0Y6hRY8
+      AR28gox+4b6M+I3PNDZsjAwICl7lQefeuBDXnmemy
+      JTBgQ+WpZE/nSyUGuuT9ALSER+WKh96xGn4N8851YY
+      DCk1Hrhg8hzGyINBkTqA460gw8BpvI/tGuMtlnq1BF
+      JyDPLgfdBEnEiMyAOTMi1TSQcjGiIpIEaea42qNQKC1
+      0F0jUtJNblmEsG4cBsoAW4DTwErgCbLPQkCuzmGc3yu8
+      ovCRXu13kMXATKPOrrtSByyYuBpbJiHHHdqwBeFjBy3C
+      ORSmk7TEkMe21R1sgPX7nu7THcGGdZkOmRlMlo0qnbps9
+      Sb/+7KJkv95KGb20vdlCF3SkrktPGPxO7Vi1J9o6+U8bnD
+      ImoWokUWsWxUzJuMiSi6ihS2CKOPdBsTLlk0pWOkcBM4Le
+      Iui4HPhmScdIxMngsjjkbXp8hkdNEDElx7JiMWwyJPCFi2C2
+      O3ZDxWg9txBwihAWujW4KMFVaaBMyW4kYRrP+I9w0JHKSiCEl
+      jh2S8VEPfVGkcEAcuyrjjYZEfsrhW2RQI469k/E04IchmToihD
+      JgTBxb7OHQzkR+SWPYJItJ6LiW1dmeCIiIWy6ETwOaxZj6R6ewIg
+      QiSny16yZYIoY+AtOzohSkdFAEDIsxFR2kw30TMJFbxSCyWYypM61
+      lcq8aeBQgkXGKhG4xOOpawVTbsk92/PEAyFQXg4ja4O6KQbUk77LU
+      068hsoMiQZG5ntWyHwZWyuGdCdpC/JTnGfuBtx7TRkVTYbvmmX7+Ayr
+      kvOuyfO/4XIDIHfndIs0zY8QMaQ2ZKmIEXcFvI0bQFXwrMYKu4PuIEa
+      o0RNKUUMEvpEQKvp4SKfiDxAh1pRKRclcT6pan0jXE
+      CnOB81L46rRftTvzvGr5C1rq4flYdEfZAAAAAElFTk
+      SuQmCC"></p>
+  </div>
+</div>
+<div class="bg-green-500"> </div>
+</section>
+
+
+         <!--  -->
+
+         <!--  -->
+
+         <footer class="footer bg-base-300 text-base-content p-10">
+          <nav>
+            <h6 class="footer-title">Services</h6>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+          </nav>
+          <nav>
+            <h6 class="footer-title">Company</h6>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+          </nav>
+          <nav>
+            <h6 class="footer-title">Social</h6>
+            <div class="grid grid-flow-col gap-4">
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                </svg>
+              </a>
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current">
+                  <path
+                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                </svg>
+              </a>
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="fill-current">
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </footer>
+         <!--  -->
+<!-- <script src="./sstyle.js"></script> -->
+
+<script src="./index.js"></script>
+
+
 </body>
 </html>
